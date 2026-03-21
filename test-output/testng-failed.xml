@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Saucedemo Test Suite]" guice-stage="DEVELOPMENT" verbose="2">
+  <listeners>
+    <listener class-name="utils.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="E2E Test(failed)" verbose="2">
+    <classes>
+      <class name="testcase.TC_001">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="run_TC_003"/>
+          <include name="launchBrowser"/>
+          <include name="run_TC_002"/>
+          <include name="tearDownReport"/>
+          <include name="run_TC_004"/>
+          <include name="run_TC_006"/>
+          <include name="run_TC_005" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- testcase.TC_001 -->
+    </classes>
+  </test> <!-- E2E Test(failed) -->
+</suite> <!-- Failed suite [Saucedemo Test Suite] -->
