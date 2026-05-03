@@ -4,6 +4,19 @@
   <listeners>
     <listener class-name="utils.Listeners"/>
   </listeners>
+  <test thread-count="5" name="Negative Login Test(failed)" verbose="2">
+    <classes>
+      <class name="testcase.TC_001_Negative">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="tearDownReport"/>
+          <include name="run_TC_001_Negative" invocation-numbers="0"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- testcase.TC_001_Negative -->
+    </classes>
+  </test> <!-- Negative Login Test(failed) -->
   <test thread-count="5" name="E2E Test(failed)" verbose="2">
     <classes>
       <class name="testcase.TC_001">
@@ -14,8 +27,9 @@
           <include name="run_TC_002"/>
           <include name="tearDownReport"/>
           <include name="run_TC_004"/>
+          <include name="run_TC_001" invocation-numbers="0"/>
           <include name="run_TC_006"/>
-          <include name="run_TC_005" invocation-numbers="0"/>
+          <include name="run_TC_005"/>
           <include name="beforeSuite"/>
         </methods>
       </class> <!-- testcase.TC_001 -->

@@ -2,16 +2,22 @@ package base;
 
 import java.io.IOException;
 import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import  org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
+
+import com.epam.healenium.SelfHealingDriver;
+
 import utils.ExcelUtil;
 import utils.ReportUtil;
 
@@ -43,13 +49,23 @@ public class Baseclass {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--incognito");
             options.addArguments("--disable-notifications");
-                driver = new ChromeDriver(options);
+            WebDriver chrome = new ChromeDriver(options);      //assigning to ChromeDriver
+            driver = SelfHealingDriver.create(chrome);
+            System.out.println(">>> SelfHealingDriver active: " + driver.getClass().getName());// wrap with SelfHealingDriver
                 break;
             case "firefox":
-                driver = new FirefoxDriver();
+            	FirefoxOptions ffoptions = new FirefoxOptions();
+                ffoptions.addArguments("--incognito");
+                ffoptions.addArguments("--disable-notifications");
+                WebDriver firefox = new FirefoxDriver();           //assigning to FirefoxDriver
+                driver = SelfHealingDriver.create(firefox);          // wrap with SelfHealingDriver
                 break;
             case "edge":
-                driver = new EdgeDriver();
+            	EdgeOptions eoptions = new EdgeOptions();
+                eoptions.addArguments("--incognito");
+                eoptions.addArguments("--disable-notifications");
+                WebDriver edge = new EdgeDriver();
+            	driver = SelfHealingDriver.create(edge);
                 break;
             default:
                 throw new IllegalArgumentException("Browser not supported: " + browser);

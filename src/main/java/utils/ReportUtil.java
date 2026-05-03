@@ -11,6 +11,8 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.epam.healenium.SelfHealingDriver;
+
 import base.Baseclass;
 
 public class ReportUtil {
@@ -27,11 +29,16 @@ public class ReportUtil {
 
             filePath = subFolder + File.separator + testName + "_" + timestamp + ".png";
 
-            TakesScreenshot ts = (TakesScreenshot) Baseclass.driver;
+            /*TakesScreenshot ts = (TakesScreenshot) ((SelfHealingDriver) Baseclass.driver).getDriver();
             File src = ts.getScreenshotAs(OutputType.FILE);
             File dest = new File(filePath);
             FileUtils.copyFile(src, dest);
+            System.out.println("Screenshot saved: " + filePath);  */
+            
+            byte[] srcBytes = ((TakesScreenshot) Baseclass.driver).getScreenshotAs(OutputType.BYTES);
+            FileUtils.writeByteArrayToFile(new File(filePath), srcBytes);
             System.out.println("Screenshot saved: " + filePath);
+            
         } catch (IOException e) {
             System.out.println("Failed to capture screenshot: " + e.getMessage());
         } catch (Exception e) {

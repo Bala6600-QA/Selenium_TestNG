@@ -1,0 +1,53 @@
+version: "3.8"
+
+services:
+
+  postgres-db:
+    image: postgres:15.5-alpine
+    container_name: testng-saucedemo-postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - POSTGRES_DB=testng_saucedemo_healenium
+      - POSTGRES_USER=saucedemo_healenium_user
+      - POSTGRES_PASSWORD=saucedemo_healenium_pass
+      - TZ=Asia/Kolkata
+    networks:
+      - testng-saucedemo-network
+
+  selector-imitator:
+    image: healenium/hlm-selector-imitator:1.2
+    container_name: testng-saucedemo-selector-imitator
+    restart: always
+    ports:
+      - "8000:8000"
+    networks:
+      - testng-saucedemo-network
+
+  healenium:
+    image: healenium/hlm-backend:3.4.1
+    container_name: testng-saucedemo-healenium
+    restart: on-failure
+    ports:
+      - "7878:7878"
+      - "8888:8080"
+    depends_on:
+      - postgres-db
+      - selector-imitator
+    environment:
+      - spring.datasource.url=jdbc:postgresql://postgres-db:5432/testng_saucedemo_healenium
+      - spring.datasource.username=saucedemo_healenium_user
+      - spring.datasource.password=saucedemo_healenium_pass
+      - TZ=Asia/Kolkata
+    volumes:
+      - ./screenshots/:/screenshots
+      - ./logs/:/logs
+    networks:
+      - testng-saucedemo-network
+
+networks:
+  testng-saucedemo-network:
+    name: testng-saucedemo-network

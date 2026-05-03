@@ -16,7 +16,7 @@ public class Loginpage {
 	   PageFactory.initElements(driver, this);
 		}
 	  
-	   @FindBy(name="user-name") // Enter username
+	   @FindBy(className ="user-name") // change to name attribute to class for healenium compatibility
 		private WebElement loginname;
 	   @FindBy (name="password") // Enter password 
 	   private WebElement loginpassword;

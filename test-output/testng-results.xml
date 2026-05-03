@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-21T23:18:20 IST" name="Saucedemo Test Suite" finished-at="2026-03-21T23:18:38 IST" duration-ms="17975">
+  <suite started-at="2026-05-03T16:09:02 IST" name="Saucedemo Test Suite" finished-at="2026-05-03T16:09:41 IST" duration-ms="39438">
     <groups>
     </groups>
-    <test started-at="2026-03-21T23:18:20 IST" name="Negative Login Test" finished-at="2026-03-21T23:18:26 IST" duration-ms="5686">
+    <test started-at="2026-05-03T16:09:02 IST" name="Negative Login Test" finished-at="2026-05-03T16:09:19 IST" duration-ms="16700">
       <class name="testcase.TC_001_Negative">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcase.TC_001_Negative@6c40365c]" started-at="2026-03-21T23:18:20 IST" name="launchBrowser" finished-at="2026-03-21T23:18:24 IST" duration-ms="3574" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcase.TC_001_Negative@175b9425]" started-at="2026-05-03T16:09:02 IST" name="launchBrowser" finished-at="2026-05-03T16:09:05 IST" duration-ms="2582" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="run_TC_001_Negative(java.util.HashMap)[pri:0, instance:testcase.TC_001_Negative@6c40365c]" started-at="2026-03-21T23:18:25 IST" name="run_TC_001_Negative" data-provider="NegativeLogindata" finished-at="2026-03-21T23:18:26 IST" duration-ms="1228" status="PASS">
+        <test-method signature="run_TC_001_Negative(java.util.HashMap)[pri:0, instance:testcase.TC_001_Negative@175b9425]" started-at="2026-05-03T16:09:05 IST" name="run_TC_001_Negative" data-provider="NegativeLogindata" finished-at="2026-05-03T16:09:18 IST" duration-ms="13156" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,23 +22,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run_TC_001_Negative -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcase.TC_001_Negative@6c40365c]" started-at="2026-03-21T23:18:26 IST" name="closeBrowser" finished-at="2026-03-21T23:18:26 IST" duration-ms="141" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcase.TC_001_Negative@175b9425]" started-at="2026-05-03T16:09:19 IST" name="closeBrowser" finished-at="2026-05-03T16:09:19 IST" duration-ms="208" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- testcase.TC_001_Negative -->
     </test> <!-- Negative Login Test -->
-    <test started-at="2026-03-21T23:18:26 IST" name="E2E Test" finished-at="2026-03-21T23:18:38 IST" duration-ms="12030">
+    <test started-at="2026-05-03T16:09:19 IST" name="E2E Test" finished-at="2026-05-03T16:09:41 IST" duration-ms="22486">
       <class name="testcase.TC_001">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:testcase.TC_001@4e3958e7]" started-at="2026-03-21T23:18:20 IST" name="beforeSuite" finished-at="2026-03-21T23:18:20 IST" duration-ms="205" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:testcase.TC_001@2e1d27ba]" started-at="2026-05-03T16:09:02 IST" name="beforeSuite" finished-at="2026-05-03T16:09:02 IST" duration-ms="190" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcase.TC_001@4e3958e7]" started-at="2026-03-21T23:18:26 IST" name="launchBrowser" finished-at="2026-03-21T23:18:28 IST" duration-ms="1525" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:testcase.TC_001@2e1d27ba]" started-at="2026-05-03T16:09:19 IST" name="launchBrowser" finished-at="2026-05-03T16:09:21 IST" duration-ms="1681" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method signature="run_TC_001(java.util.HashMap)[pri:0, instance:testcase.TC_001@4e3958e7]" started-at="2026-03-21T23:18:28 IST" name="run_TC_001" data-provider="Logindata" finished-at="2026-03-21T23:18:31 IST" duration-ms="3236" status="PASS">
+        <test-method signature="run_TC_001(java.util.HashMap)[pri:0, instance:testcase.TC_001@2e1d27ba]" started-at="2026-05-03T16:09:21 IST" name="run_TC_001" data-provider="Logindata" finished-at="2026-05-03T16:09:34 IST" duration-ms="13444" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -49,19 +49,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run_TC_001 -->
-        <test-method signature="run_TC_002()[pri:0, instance:testcase.TC_001@4e3958e7]" started-at="2026-03-21T23:18:31 IST" name="run_TC_002" finished-at="2026-03-21T23:18:31 IST" duration-ms="176" status="PASS">
+        <test-method signature="run_TC_002()[pri:0, instance:testcase.TC_001@2e1d27ba]" started-at="2026-05-03T16:09:34 IST" name="run_TC_002" finished-at="2026-05-03T16:09:35 IST" duration-ms="374" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run_TC_002 -->
-        <test-method signature="run_TC_003()[pri:0, instance:testcase.TC_001@4e3958e7]" started-at="2026-03-21T23:18:31 IST" name="run_TC_003" finished-at="2026-03-21T23:18:32 IST" depends-on-methods="testcase.TC_001.run_TC_002" duration-ms="143" status="PASS">
+        <test-method signature="run_TC_003()[pri:0, instance:testcase.TC_001@2e1d27ba]" started-at="2026-05-03T16:09:35 IST" name="run_TC_003" finished-at="2026-05-03T16:09:35 IST" depends-on-methods="testcase.TC_001.run_TC_002" duration-ms="211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run_TC_003 -->
-        <test-method signature="run_TC_004()[pri:0, instance:testcase.TC_001@4e3958e7]" started-at="2026-03-21T23:18:32 IST" name="run_TC_004" finished-at="2026-03-21T23:18:34 IST" depends-on-methods="testcase.TC_001.run_TC_003" duration-ms="2116" status="PASS">
+        <test-method signature="run_TC_004()[pri:0, instance:testcase.TC_001@2e1d27ba]" started-at="2026-05-03T16:09:35 IST" name="run_TC_004" finished-at="2026-05-03T16:09:37 IST" depends-on-methods="testcase.TC_001.run_TC_003" duration-ms="2146" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run_TC_004 -->
-        <test-method signature="run_TC_005(java.util.HashMap)[pri:0, instance:testcase.TC_001@4e3958e7]" started-at="2026-03-21T23:18:34 IST" name="run_TC_005" data-provider="Formdata" finished-at="2026-03-21T23:18:36 IST" depends-on-methods="testcase.TC_001.run_TC_004" duration-ms="1934" status="PASS">
+        <test-method signature="run_TC_005(java.util.HashMap)[pri:0, instance:testcase.TC_001@2e1d27ba]" started-at="2026-05-03T16:09:37 IST" name="run_TC_005" data-provider="Formdata" finished-at="2026-05-03T16:09:39 IST" depends-on-methods="testcase.TC_001.run_TC_004" duration-ms="2161" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -72,15 +72,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run_TC_005 -->
-        <test-method signature="run_TC_006()[pri:0, instance:testcase.TC_001@4e3958e7]" started-at="2026-03-21T23:18:36 IST" name="run_TC_006" finished-at="2026-03-21T23:18:38 IST" depends-on-methods="testcase.TC_001.run_TC_005" duration-ms="2140" status="PASS">
+        <test-method signature="run_TC_006()[pri:0, instance:testcase.TC_001@2e1d27ba]" started-at="2026-05-03T16:09:39 IST" name="run_TC_006" finished-at="2026-05-03T16:09:41 IST" depends-on-methods="testcase.TC_001.run_TC_005" duration-ms="2228" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- run_TC_006 -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcase.TC_001@4e3958e7]" started-at="2026-03-21T23:18:38 IST" name="closeBrowser" finished-at="2026-03-21T23:18:38 IST" duration-ms="158" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:testcase.TC_001@2e1d27ba]" started-at="2026-05-03T16:09:41 IST" name="closeBrowser" finished-at="2026-05-03T16:09:41 IST" duration-ms="166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:testcase.TC_001@4e3958e7]" started-at="2026-03-21T23:18:38 IST" name="tearDownReport" finished-at="2026-03-21T23:18:38 IST" duration-ms="8" status="PASS">
+        <test-method is-config="true" signature="tearDownReport()[pri:0, instance:testcase.TC_001@2e1d27ba]" started-at="2026-05-03T16:09:41 IST" name="tearDownReport" finished-at="2026-05-03T16:09:41 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownReport -->
