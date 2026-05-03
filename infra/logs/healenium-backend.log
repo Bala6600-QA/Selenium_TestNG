@@ -1750,3 +1750,204 @@
 2026-05-03 13:39:39.586  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath(//button[text()="Open Menu"]) 
 2026-05-03 13:39:40.672  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//a[text()="Logout"]) 
 2026-05-03 13:39:41.763  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.name(login-button) 
+2026-05-03 15:25:46.697  INFO 1 - [       main] com.epam.healenium.Application   : Starting Application using Java 17.0.8.1 on 3e940a18021c with PID 1 (/healenium-backend.jar started by root in /) 
+2026-05-03 15:25:46.701  INFO 1 - [       main] com.epam.healenium.Application   : No active profile set, falling back to 1 default profile: "default" 
+2026-05-03 15:25:47.866  INFO 1 - [       main] .RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2026-05-03 15:25:48.065  INFO 1 - [       main] .RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 189 ms. Found 4 JPA repository interfaces. 
+2026-05-03 15:25:48.878  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat initialized with port(s): 7878 (http) 
+2026-05-03 15:25:48.891  INFO 1 - [       main] o.a.c.core.StandardService       : Starting service [Tomcat] 
+2026-05-03 15:25:48.893  INFO 1 - [       main] o.a.c.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.78] 
+2026-05-03 15:25:48.974  INFO 1 - [       main] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring embedded WebApplicationContext 
+2026-05-03 15:25:48.975  INFO 1 - [       main] rvletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2222 ms 
+2026-05-03 15:25:49.317  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Starting... 
+2026-05-03 15:25:49.572  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Start completed. 
+2026-05-03 15:25:49.723  INFO 1 - [       main] liquibase.database               : Set default schema name to healenium 
+2026-05-03 15:25:49.883  INFO 1 - [       main] liquibase.lockservice            : Successfully acquired change log lock 
+2026-05-03 15:25:50.394  INFO 1 - [       main] liquibase.changelog              : Creating database history table with name: healenium.databasechangelog 
+2026-05-03 15:25:50.404  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2026-05-03 15:25:50.483  INFO 1 - [       main] liquibase.command                : Using deploymentId: 7811150411 
+2026-05-03 15:25:50.487  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2026-05-03 15:25:50.526  INFO 1 - [       main] liquibase.changelog              : Sequence healing_result_seq created 
+2026-05-03 15:25:50.528  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/001_createSequence.xml::3::nkobzev ran successfully in 9ms 
+2026-05-03 15:25:50.545  INFO 1 - [       main] liquibase.changelog              : Table SELECTOR created 
+2026-05-03 15:25:50.548  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::5::nkobzev ran successfully in 8ms 
+2026-05-03 15:25:50.581  INFO 1 - [       main] liquibase.changelog              : Index SELECTOR_PK created 
+2026-05-03 15:25:50.583  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::6::nkobzev ran successfully in 30ms 
+2026-05-03 15:25:50.597  INFO 1 - [       main] liquibase.changelog              : Table HEALING created 
+2026-05-03 15:25:50.599  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::7::nkobzev ran successfully in 11ms 
+2026-05-03 15:25:50.624  INFO 1 - [       main] liquibase.changelog              : Index HEALING_PK created 
+2026-05-03 15:25:50.629  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING (SELECTOR_ID) 
+2026-05-03 15:25:50.631  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::8::nkobzev ran successfully in 26ms 
+2026-05-03 15:25:50.644  INFO 1 - [       main] liquibase.changelog              : Table HEALING_RESULT created 
+2026-05-03 15:25:50.646  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::9::nkobzev ran successfully in 10ms 
+2026-05-03 15:25:50.677  INFO 1 - [       main] liquibase.changelog              : Index HEALING_RESULT_PK created 
+2026-05-03 15:25:50.680  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING_RESULT (HEALING_ID) 
+2026-05-03 15:25:50.682  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::10::nkobzev ran successfully in 30ms 
+2026-05-03 15:25:50.693  INFO 1 - [       main] liquibase.changelog              : Table REPORT created 
+2026-05-03 15:25:50.695  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::11::nkobzev ran successfully in 7ms 
+2026-05-03 15:25:50.724  INFO 1 - [       main] liquibase.changelog              : Index REPORT_PK created 
+2026-05-03 15:25:50.728  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::12::nkobzev ran successfully in 28ms 
+2026-05-03 15:25:50.736  INFO 1 - [       main] liquibase.changelog              : Columns COMMAND(VARCHAR(264)),ENABLE_HEALING(BOOLEAN) added to SELECTOR 
+2026-05-03 15:25:50.738  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/006_command_and_healingenable_column.xml::13::nkobzev ran successfully in 4ms 
+2026-05-03 15:25:50.744  INFO 1 - [       main] liquibase.util                   : UPDATE SUMMARY 
+2026-05-03 15:25:50.745  INFO 1 - [       main] liquibase.util                   : Run:                         10 
+2026-05-03 15:25:50.745  INFO 1 - [       main] liquibase.util                   : Previously run:               0 
+2026-05-03 15:25:50.746  INFO 1 - [       main] liquibase.util                   : Filtered out:                 0 
+2026-05-03 15:25:50.746  INFO 1 - [       main] liquibase.util                   : ------------------------------- 
+2026-05-03 15:25:50.746  INFO 1 - [       main] liquibase.util                   : Total change sets:           10\n  
+2026-05-03 15:25:50.748  INFO 1 - [       main] liquibase.util                   : Update summary generated 
+2026-05-03 15:25:50.749  INFO 1 - [       main] liquibase.command                : Update command completed successfully. 
+2026-05-03 15:25:50.756  INFO 1 - [       main] liquibase.lockservice            : Successfully released change log lock 
+2026-05-03 15:25:50.761  INFO 1 - [       main] liquibase.lockservice            : Successfully released change log lock 
+2026-05-03 15:25:50.762  INFO 1 - [       main] liquibase.command                : Command execution complete 
+2026-05-03 15:25:50.909  INFO 1 - [       main] o.h.j.internal.util.LogHelper    : HHH000204: Processing PersistenceUnitInfo [name: default] 
+2026-05-03 15:25:51.006  INFO 1 - [       main] org.hibernate.Version            : HHH000412: Hibernate ORM core version 5.6.15.Final 
+2026-05-03 15:25:51.222  INFO 1 - [       main] o.h.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2026-05-03 15:25:51.352  INFO 1 - [       main] org.hibernate.dialect.Dialect    : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2026-05-03 15:25:52.111  WARN 1 - [       main] o.h.m.internal.MetadataContext   : HHH015011: Unable to locate static metamodel field : com.epam.healenium.model.domain.Selector_#nodePathWrapper; this may or may not indicate a problem with the static metamodel 
+2026-05-03 15:25:52.125  INFO 1 - [       main] h.e.t.j.p.i.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2026-05-03 15:25:52.138  INFO 1 - [       main] ontainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2026-05-03 15:25:52.987  INFO 1 - [       main] .a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index 
+2026-05-03 15:25:53.412  INFO 1 - [       main] .s.b.a.e.w.EndpointLinksResolver : Exposing 1 endpoint(s) beneath base path '/actuator' 
+2026-05-03 15:25:53.466  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port(s): 7878 (http) with context path '' 
+2026-05-03 15:25:53.564  INFO 1 - [       main] com.epam.healenium.Application   : Started Application in 7.683 seconds (JVM running for 8.451) 
+2026-05-03 15:29:47.573  INFO 1 - [7878-exec-1] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2026-05-03 15:29:47.575  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Initializing Servlet 'dispatcherServlet' 
+2026-05-03 15:29:47.581  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Completed initialization in 5 ms 
+2026-05-03 15:30:37.141  INFO 1 - [7878-exec-4] healenium                        : [Get Reference] Request: RequestDto(locator=user-name, className=pages.Loginpage, methodName=logininputs, command=findElement, url=https://www.saucedemo.com/)) 
+2026-05-03 15:30:49.335  INFO 1 - [7878-exec-9] healenium                        : [Get Reference] Request: RequestDto(locator=user-name, className=pages.Loginpage, methodName=logininputs, command=findElement, url=https://www.saucedemo.com/)) 
+2026-05-03 15:32:42.035  INFO 1 - [hutdownHook] ontainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default' 
+2026-05-03 15:32:42.039  INFO 1 - [hutdownHook] c.z.hikari.HikariDataSource      : HikariPool-1 - Shutdown initiated... 
+2026-05-03 15:32:42.043  INFO 1 - [hutdownHook] c.z.hikari.HikariDataSource      : HikariPool-1 - Shutdown completed. 
+2026-05-03 15:33:48.582  INFO 1 - [       main] com.epam.healenium.Application   : Starting Application using Java 17.0.8.1 on d979e3bca503 with PID 1 (/healenium-backend.jar started by root in /) 
+2026-05-03 15:33:48.587  INFO 1 - [       main] com.epam.healenium.Application   : No active profile set, falling back to 1 default profile: "default" 
+2026-05-03 15:33:49.769  INFO 1 - [       main] .RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2026-05-03 15:33:49.980  INFO 1 - [       main] .RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 199 ms. Found 4 JPA repository interfaces. 
+2026-05-03 15:33:50.758  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat initialized with port(s): 7878 (http) 
+2026-05-03 15:33:50.772  INFO 1 - [       main] o.a.c.core.StandardService       : Starting service [Tomcat] 
+2026-05-03 15:33:50.773  INFO 1 - [       main] o.a.c.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.78] 
+2026-05-03 15:33:50.853  INFO 1 - [       main] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring embedded WebApplicationContext 
+2026-05-03 15:33:50.854  INFO 1 - [       main] rvletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2207 ms 
+2026-05-03 15:33:51.234  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Starting... 
+2026-05-03 15:33:51.445  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Start completed. 
+2026-05-03 15:33:51.582  INFO 1 - [       main] liquibase.database               : Set default schema name to healenium 
+2026-05-03 15:33:51.750  INFO 1 - [       main] liquibase.lockservice            : Successfully acquired change log lock 
+2026-05-03 15:33:52.264  INFO 1 - [       main] liquibase.changelog              : Creating database history table with name: healenium.databasechangelog 
+2026-05-03 15:33:52.283  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2026-05-03 15:33:52.369  INFO 1 - [       main] liquibase.command                : Using deploymentId: 7811632288 
+2026-05-03 15:33:52.376  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2026-05-03 15:33:52.412  INFO 1 - [       main] liquibase.changelog              : Sequence healing_result_seq created 
+2026-05-03 15:33:52.415  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/001_createSequence.xml::3::nkobzev ran successfully in 9ms 
+2026-05-03 15:33:52.430  INFO 1 - [       main] liquibase.changelog              : Table SELECTOR created 
+2026-05-03 15:33:52.432  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::5::nkobzev ran successfully in 9ms 
+2026-05-03 15:33:52.467  INFO 1 - [       main] liquibase.changelog              : Index SELECTOR_PK created 
+2026-05-03 15:33:52.469  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/002_selector.xml::6::nkobzev ran successfully in 32ms 
+2026-05-03 15:33:52.479  INFO 1 - [       main] liquibase.changelog              : Table HEALING created 
+2026-05-03 15:33:52.482  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::7::nkobzev ran successfully in 7ms 
+2026-05-03 15:33:52.504  INFO 1 - [       main] liquibase.changelog              : Index HEALING_PK created 
+2026-05-03 15:33:52.509  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING (SELECTOR_ID) 
+2026-05-03 15:33:52.511  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/003_healing.xml::8::nkobzev ran successfully in 24ms 
+2026-05-03 15:33:52.527  INFO 1 - [       main] liquibase.changelog              : Table HEALING_RESULT created 
+2026-05-03 15:33:52.530  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::9::nkobzev ran successfully in 11ms 
+2026-05-03 15:33:52.557  INFO 1 - [       main] liquibase.changelog              : Index HEALING_RESULT_PK created 
+2026-05-03 15:33:52.561  INFO 1 - [       main] liquibase.changelog              : Foreign key constraint added to HEALING_RESULT (HEALING_ID) 
+2026-05-03 15:33:52.563  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/004_healingResult.xml::10::nkobzev ran successfully in 28ms 
+2026-05-03 15:33:52.576  INFO 1 - [       main] liquibase.changelog              : Table REPORT created 
+2026-05-03 15:33:52.578  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::11::nkobzev ran successfully in 9ms 
+2026-05-03 15:33:52.609  INFO 1 - [       main] liquibase.changelog              : Index REPORT_PK created 
+2026-05-03 15:33:52.616  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/005_report.xml::12::nkobzev ran successfully in 29ms 
+2026-05-03 15:33:52.624  INFO 1 - [       main] liquibase.changelog              : Columns COMMAND(VARCHAR(264)),ENABLE_HEALING(BOOLEAN) added to SELECTOR 
+2026-05-03 15:33:52.626  INFO 1 - [       main] liquibase.changelog              : ChangeSet changelog/006_command_and_healingenable_column.xml::13::nkobzev ran successfully in 6ms 
+2026-05-03 15:33:52.632  INFO 1 - [       main] liquibase.util                   : UPDATE SUMMARY 
+2026-05-03 15:33:52.633  INFO 1 - [       main] liquibase.util                   : Run:                         10 
+2026-05-03 15:33:52.633  INFO 1 - [       main] liquibase.util                   : Previously run:               0 
+2026-05-03 15:33:52.634  INFO 1 - [       main] liquibase.util                   : Filtered out:                 0 
+2026-05-03 15:33:52.634  INFO 1 - [       main] liquibase.util                   : ------------------------------- 
+2026-05-03 15:33:52.635  INFO 1 - [       main] liquibase.util                   : Total change sets:           10\n  
+2026-05-03 15:33:52.636  INFO 1 - [       main] liquibase.util                   : Update summary generated 
+2026-05-03 15:33:52.636  INFO 1 - [       main] liquibase.command                : Update command completed successfully. 
+2026-05-03 15:33:52.641  INFO 1 - [       main] liquibase.lockservice            : Successfully released change log lock 
+2026-05-03 15:33:52.646  INFO 1 - [       main] liquibase.lockservice            : Successfully released change log lock 
+2026-05-03 15:33:52.647  INFO 1 - [       main] liquibase.command                : Command execution complete 
+2026-05-03 15:33:52.802  INFO 1 - [       main] o.h.j.internal.util.LogHelper    : HHH000204: Processing PersistenceUnitInfo [name: default] 
+2026-05-03 15:33:52.893  INFO 1 - [       main] org.hibernate.Version            : HHH000412: Hibernate ORM core version 5.6.15.Final 
+2026-05-03 15:33:53.161  INFO 1 - [       main] o.h.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2026-05-03 15:33:53.313  INFO 1 - [       main] org.hibernate.dialect.Dialect    : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2026-05-03 15:33:54.155  WARN 1 - [       main] o.h.m.internal.MetadataContext   : HHH015011: Unable to locate static metamodel field : com.epam.healenium.model.domain.Selector_#nodePathWrapper; this may or may not indicate a problem with the static metamodel 
+2026-05-03 15:33:54.169  INFO 1 - [       main] h.e.t.j.p.i.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2026-05-03 15:33:54.182  INFO 1 - [       main] ontainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2026-05-03 15:33:55.029  INFO 1 - [       main] .a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index 
+2026-05-03 15:33:55.439  INFO 1 - [       main] .s.b.a.e.w.EndpointLinksResolver : Exposing 1 endpoint(s) beneath base path '/actuator' 
+2026-05-03 15:33:55.487  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port(s): 7878 (http) with context path '' 
+2026-05-03 15:33:55.565  INFO 1 - [       main] com.epam.healenium.Application   : Started Application in 7.781 seconds (JVM running for 8.566) 
+2026-05-03 15:34:13.029  INFO 1 - [7878-exec-1] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2026-05-03 15:34:13.030  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Initializing Servlet 'dispatcherServlet' 
+2026-05-03 15:34:13.033  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Completed initialization in 2 ms 
+2026-05-03 15:34:14.953  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.name(user-name) 
+2026-05-03 15:34:15.087  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.name(password) 
+2026-05-03 15:34:15.171  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.name(login-button) 
+2026-05-03 15:34:16.273  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath(//h3[@data-test='error']) 
+2026-05-03 15:34:18.512  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.name(user-name) 
+2026-05-03 15:34:18.651  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.name(password) 
+2026-05-03 15:34:18.733  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.name(login-button) 
+2026-05-03 15:34:21.874  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath(//select[@class="product_sort_container"]) 
+2026-05-03 15:34:21.916  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.xpath(//select[@class="product_sort_container"]) 
+2026-05-03 15:34:21.954  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath(//select[@class="product_sort_container"]) 
+2026-05-03 15:34:21.995  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath(//select[@class="product_sort_container"]) 
+2026-05-03 15:34:22.043  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath(.//option[@value = "lohi"]) 
+2026-05-03 15:34:22.120  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//span[@class="active_option"]) 
+2026-05-03 15:34:22.160  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath((//button[text()='Add to cart'])[3]) 
+2026-05-03 15:34:22.224  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath(//span[@class="shopping_cart_badge"]) 
+2026-05-03 15:34:22.266  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name "])[2]/parent::a) 
+2026-05-03 15:34:22.372  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.id(add-to-cart) 
+2026-05-03 15:34:22.428  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath(//span[@class="shopping_cart_badge"]) 
+2026-05-03 15:34:22.467  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.xpath(//a[@class="shopping_cart_link"]) 
+2026-05-03 15:34:24.548  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath(//button[text()="Checkout"]) 
+2026-05-03 15:34:24.654  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(first-name) 
+2026-05-03 15:34:25.229  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.id(last-name) 
+2026-05-03 15:34:25.801  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.id(postal-code) 
+2026-05-03 15:34:26.377  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.id(continue) 
+2026-05-03 15:34:26.457  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath(//div[@data-test='subtotal-label']) 
+2026-05-03 15:34:26.489  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath(//div[@data-test='tax-label']) 
+2026-05-03 15:34:26.523  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath(//div[@data-test='total-label']) 
+2026-05-03 15:34:26.561  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.id(finish) 
+2026-05-03 15:34:26.590  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(finish) 
+2026-05-03 15:34:26.667  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath(//h2[text()="Thank you for your order!"]) 
+2026-05-03 15:34:26.702  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.name(back-to-products) 
+2026-05-03 15:34:26.798  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath(//button[text()="Open Menu"]) 
+2026-05-03 15:34:27.874  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//a[text()="Logout"]) 
+2026-05-03 15:34:28.945  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.name(login-button) 
+2026-05-03 15:36:27.470  INFO 1 - [7878-exec-3] healenium                        : [Get Reference] Request: RequestDto(locator=user-name, className=pages.Loginpage, methodName=logininputs, command=findElement, url=https://www.saucedemo.com/)) 
+2026-05-03 15:36:28.783  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.name(password) 
+2026-05-03 15:36:28.856  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.name(login-button) 
+2026-05-03 15:36:29.940  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//h3[@data-test='error']) 
+2026-05-03 15:36:42.040  INFO 1 - [7878-exec-9] healenium                        : [Get Reference] Request: RequestDto(locator=user-name, className=pages.Loginpage, methodName=logininputs, command=findElement, url=https://www.saucedemo.com/)) 
+2026-05-03 15:36:42.286  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.name(password) 
+2026-05-03 15:36:42.345  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.name(login-button) 
+2026-05-03 15:36:45.468  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath(//select[@class="product_sort_container"]) 
+2026-05-03 15:36:45.501  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath(//select[@class="product_sort_container"]) 
+2026-05-03 15:36:45.534  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath(//select[@class="product_sort_container"]) 
+2026-05-03 15:36:45.570  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.xpath(//select[@class="product_sort_container"]) 
+2026-05-03 15:36:45.602  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath(.//option[@value = "lohi"]) 
+2026-05-03 15:36:45.678  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath(//span[@class="active_option"]) 
+2026-05-03 15:36:45.720  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.xpath((//button[text()='Add to cart'])[3]) 
+2026-05-03 15:36:45.789  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath(//span[@class="shopping_cart_badge"]) 
+2026-05-03 15:36:45.834  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath((//div[@class="inventory_item_name "])[2]/parent::a) 
+2026-05-03 15:36:45.930  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.id(add-to-cart) 
+2026-05-03 15:36:45.990  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.xpath(//span[@class="shopping_cart_badge"]) 
+2026-05-03 15:36:46.028  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.xpath(//a[@class="shopping_cart_link"]) 
+2026-05-03 15:36:48.108  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath(//button[text()="Checkout"]) 
+2026-05-03 15:36:48.209  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.id(first-name) 
+2026-05-03 15:36:48.789  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.id(last-name) 
+2026-05-03 15:36:49.364  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.id(postal-code) 
+2026-05-03 15:36:49.948  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.id(continue) 
+2026-05-03 15:36:50.034  INFO 1 - [7878-exec-1] healenium                        : [Save Elements] Request: By.xpath(//div[@data-test='subtotal-label']) 
+2026-05-03 15:36:50.069  INFO 1 - [7878-exec-2] healenium                        : [Save Elements] Request: By.xpath(//div[@data-test='tax-label']) 
+2026-05-03 15:36:50.101  INFO 1 - [7878-exec-3] healenium                        : [Save Elements] Request: By.xpath(//div[@data-test='total-label']) 
+2026-05-03 15:36:50.135  INFO 1 - [7878-exec-4] healenium                        : [Save Elements] Request: By.id(finish) 
+2026-05-03 15:36:50.167  INFO 1 - [7878-exec-5] healenium                        : [Save Elements] Request: By.id(finish) 
+2026-05-03 15:36:50.242  INFO 1 - [7878-exec-6] healenium                        : [Save Elements] Request: By.xpath(//h2[text()="Thank you for your order!"]) 
+2026-05-03 15:36:50.276  INFO 1 - [7878-exec-7] healenium                        : [Save Elements] Request: By.name(back-to-products) 
+2026-05-03 15:36:50.355  INFO 1 - [7878-exec-8] healenium                        : [Save Elements] Request: By.xpath(//button[text()="Open Menu"]) 
+2026-05-03 15:36:51.439  INFO 1 - [878-exec-10] healenium                        : [Save Elements] Request: By.xpath(//a[text()="Logout"]) 
+2026-05-03 15:36:52.509  INFO 1 - [7878-exec-9] healenium                        : [Save Elements] Request: By.name(login-button) 
