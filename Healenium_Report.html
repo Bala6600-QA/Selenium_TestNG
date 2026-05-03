@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)http://localhost:7878/healenium/report/63aed6679e00329bcd91fb6ac2cf718c -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" toscacontainsshadowdom="false" openrequests="0"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>SHA</title>
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">-->
+<!--    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">-->
+    <link href="./Healenium_Report_files/css2" rel="stylesheet">
+    <link href="./Healenium_Report_files/css2(1)" rel="stylesheet">
+    <link href="./Healenium_Report_files/css2(2)" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            font-family: "Open Sans";
+        }
+
+        .content-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            padding-left: 2%;
+        }
+
+        .content-wrapper-main {
+            background-color: #f8f8f8;
+        }
+
+        .header {
+            width: 100%;
+            height: 60px;
+            background-color: #f8f8f8;
+        }
+
+        .logo-title {
+            margin-left: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #000000;
+            text-decoration: auto;
+        }
+
+        .report-info {
+            margin: 10px 50px;
+            font-size: 24px;
+            font-weight: 400;
+            color: #000000;
+            display: table-cell;
+            width: 80%;
+            text-decoration: auto;
+            padding: 10px 50px;
+            padding-left: 35px;
+        }
+
+        .table-column {
+            padding-right: 30px;
+            display: table-cell;
+            font-size: 13px;
+            vertical-align: middle;
+        }
+
+        .screenshot-column {
+            flex: 2 0 10%;
+        }
+
+        .confirmation-column {
+            flex: 1 0 5%;
+        }
+
+        .elements-table-header {
+            padding-bottom: 8px;
+            border-bottom: 1px solid #f2f2f4;
+            font-weight: 300;
+            margin: 10px 50px;
+            display: table-row;
+            font-size: 14px;
+            color: #777;
+        }
+
+        .elements-table-row.Accepted .row-status {
+            color: #5cb85c;
+        }
+
+        .elements-table-row.Denied .row-status {
+            color: #d9534f;
+        }
+
+        .elements-table-row svg {
+            transform: rotate(90deg);
+        }
+
+        .selector-title-container.content-hidden .row-content {
+            display: none;
+        }
+
+        .elements-table-row.content-hidden svg {
+            transform: none;
+        }
+
+        .row-caption-text {
+            max-width: 90%;
+            overflow: hidden;
+            font-weight: 600;
+            text-overflow: ellipsis;
+        }
+
+        .report-description {
+            margin: 10px 50px;
+            font-weight: 300;
+            color: #777;
+            font-size: 12px;
+        }
+
+
+        .row-content.hidden {
+            display: none;
+        }
+
+        .row-content .element-column {
+            margin: 10px 0 0 30px;
+        }
+
+        .element-field-holder {
+            padding-bottom: 5px;
+            letter-spacing: -0.21px;
+            padding-top: 10px;
+        }
+
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: 600;
+            transition: 0.5s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .text-transform {
+            text-transform: uppercase;
+        }
+
+        .locator-column {
+            width: 50%;
+            padding-left: 20px;
+        }
+
+        .url-column {
+            width: 35%;
+        }
+
+        .healing-enable-column {
+            width: 15%;
+        }
+
+        .selector-menu-bar {
+            display: table;
+            width: 100%;
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-bottom: 10px;
+            height: 30px;
+        }
+
+        .main-container {
+            padding-left: 2%;
+            padding-right: 2%;
+            overflow: auto;
+            font-weight: 400;
+        }
+
+        .selector-title-container {
+            background-color: #fff;
+            width: 100%;
+            padding-top: 10px;
+            padding-left: 15px;
+            padding-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .selector-value-table {
+            display: table;
+            margin-bottom: 5px;
+        }
+
+        .selector-value-row {
+            font-weight: 300;
+            margin: 10px 50px;
+            display: table-row;
+            font-size: 14px;
+            height: 50px;
+        }
+
+        .row-content {
+            display: table-row;
+            font-size: 14px;
+        }
+
+        input[type="checkbox"] {
+            width: 40px;
+            height: 20px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: #E67574;
+            outline: none;
+            border-radius: 25px;
+            box-shadow: inset 0 0 3px rgba(0, 0, 0, .4);
+            transition: 0.5s;
+            position: relative;
+        }
+
+        input:checked[type="checkbox"] {
+            background: #6ECBA0;
+        }
+
+        input[type="checkbox"]::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            background: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, .4);
+            transition: 0.5s;
+        }
+
+        input:checked[type="checkbox"]::before {
+            left: 20px;
+        }
+
+        .report-link-list-cl:hover .row-caption-text.report-link-list-a-cl {
+            color: #fff;
+        }
+
+        .report-link-list-cl:hover {
+            background: #1a74b0;
+        }
+
+        .report-link-list-cl.active {
+            background: #1a74b0;
+        }
+
+        .report-link-list-cl {
+            font-size: 13px;
+            vertical-align: middle;
+            padding-top: 5px;
+            padding-left: 15px;
+            padding-right: 10px;
+            padding-bottom: 5px;
+            overflow-wrap: anywhere;
+            background: #fff;
+            margin-bottom: 10px;
+        }
+
+        .row-caption-text.report-link-list-a-cl {
+            color: #1a74b0;
+            text-decoration: auto;
+            font-weight: 600;
+        }
+
+        .row-caption-text.report-link-list-a-cl:hover {
+            color: #fff;
+        }
+
+        .row-caption-text.report-link-list-a-cl.active {
+            color: #fff;
+        }
+
+        .logo-container {
+            display: table;
+            padding: 10px 15px;
+            background-color: #fff;
+            font-weight: 300;
+            font-size: 14px;
+            color: #777;
+            padding-left: 15%;
+        }
+
+        .tabs-inactive-link {
+            margin: 0 10px;
+            text-decoration: auto;
+            color: #000000;
+        }
+
+        .tabs-active-link {
+            margin: 0 10px;
+            display: inline;
+            border-bottom: 2px solid #1a74b0;
+            color: #1a74b0;
+            text-decoration: auto;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        .tabs-container {
+            margin: 0 8% 0 auto;
+            font-size: 14px;
+        }
+
+        .logo-picture-container {
+            padding-left: 15px
+        }
+
+        .basic-container {
+            display: flex;
+        }
+
+        .report-links-column {
+            width: 15%;
+        }
+
+        .menu-bar-container {
+            margin-right: 20px;
+        }
+
+        .menu-bar {
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .main-column {
+            width: 85%;
+        }
+
+        .declaring-class {
+            overflow-wrap: anywhere;
+            font-size: 14px;
+        }
+
+        .healing-details {
+            padding-left: 5%;
+            overflow-wrap: anywhere;
+        }
+
+        .img-block {
+            width:100%;
+            max-width:300px;
+        }
+
+    </style>
+    <script src="./Healenium_Report_files/jquery.min.js.download"></script>
+</head>
+<body>
+<header class="header">
+    <div class="content-wrapper">
+        <div class="logo-picture-container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g fill="none" fill-rule="evenodd" transform="rotate(45 10 10)">
+                        <path fill="#F8F8F8" stroke="#000" stroke-width="2" d="M0 10a5 5 0 0 1 5-5h10a5 5 0 0 1 0 10H5a5 5 0 0 1-5-5z"></path>
+                        <path fill="#F8F8F8" stroke="#000" stroke-width="2" d="M10 0a5 5 0 0 1 5 5v10a5 5 0 0 1-10 0V5a5 5 0 0 1 5-5z"></path>
+                        <rect width="4" height="6" x="8" y="7" fill="#000" rx="2"></rect>
+                    </g>
+                </svg>
+            </div>
+        </div>
+        <a class="logo-title" href="http://localhost:7878/healenium/report/">Self-Healing Automation</a>
+        <div class="tabs-container">
+            <a class="tabs-active-link" href="http://localhost:7878/healenium/report/">Reports</a>
+            <a class="tabs-inactive-link" href="http://localhost:7878/healenium/selectors/">Selectors</a>
+        </div>
+    </div>
+</header>
+<main class="content-wrapper-main" style="display: block">
+    <div class="main-container">
+        <div class="logo-container">
+            <p class="report-info" data-report-name="">Healing Report 03 May 2026 - 18:06:31</p>
+            <p class="report-description table-column healing-enable-column">Please,
+                provide
+                feedback on healing success to make algorithm stronger</p>
+        </div>
+        <div class="basic-container">
+            <div class="report-links-column">
+                <div class="selector-menu-bar">
+                    <div class="elements-table-header">
+                        <p class="table-column text-transform">Reports</p>
+                    </div>
+                </div>
+                <div class="menu-bar-container">
+                    <div class="menu-bar">
+                        <div report-link-list="">
+                            <div class="report-link-list-cl active">
+                                <a class="row-caption-text report-link-list-a-cl active" href="http://localhost:7878/healenium/report/63aed6679e00329bcd91fb6ac2cf718c">03 May 2026 - 18:06:31</a>
+                            </div>
+                        </div>
+                        <div report-link-list="">
+                            <div class="report-link-list-cl">
+                                <a class="row-caption-text report-link-list-a-cl" href="http://localhost:7878/healenium/report/bc954699c1c59c818b49f72340132cfc">03 May 2026 - 18:06:15</a>
+                            </div>
+                        </div>
+                        <div report-link-list="">
+                            <div class="report-link-list-cl">
+                                <a class="row-caption-text report-link-list-a-cl" href="http://localhost:7878/healenium/report/9546d30424b8cfda5a6bb73b4e7035eb">03 May 2026 - 18:04:17</a>
+                            </div>
+                        </div>
+                        <div report-link-list="">
+                            <div class="report-link-list-cl">
+                                <a class="row-caption-text report-link-list-a-cl" href="http://localhost:7878/healenium/report/e941dbde9841754f5c262e1ac93f444c">03 May 2026 - 18:04:13</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-column">
+                <div class="selector-menu-bar">
+                    <div class="elements-table-header">
+                        <p class="table-column text-transform locator-column">Element</p>
+                        <p class="table-column text-transform url-column">Screenshot</p>
+                        <p class="table-column text-transform healing-enable-column">Success Healing</p>
+                    </div>
+                </div>
+                <div data-elements-table="">
+                    <div class="selector-title-container selector-value-table">
+                        <div class="selector-value-row" data-row-index="0">
+                            <div class="table-column locator-column">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="8" height="10" viewBox="0 0 8 13">
+                                    <path fill="none" fill-rule="evenodd" stroke="#000" stroke-width="2" d="M1 11.5l5-5-5-5"></path>
+                                </svg>
+                                <span class="row-caption-text declaring-class">pages.Loginpage.logininputs()</span>
+                            </div>
+                        </div>
+
+                        <div class="row-content">
+                            <div class="table-column locator-column healing-details">
+                                <div class="element-field-holder">Failed Locator: By.name(user-name)</div>
+                                <div class="element-field-holder">Healed Locator: By.cssSelector(input#user-name)</div>
+                                <div class="element-field-holder">Score: 1</div>
+
+                            </div>
+                            <div class="table-column url-column">
+                                <div class="screenshot-column">
+                                    <img id="myImg" class="img-block" src="./Healenium_Report_files/screenshot_03-May-2026-06-06-42.194.png" onclick="zoomImage(this);">
+                                    <div id="myModal" class="modal">
+                                        <span class="close">×</span>
+                                        <img class="modal-content" id="img01">
+                                        <div id="caption"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="confirmation-column table-column healing-enable-column">
+                                <div>
+                                    <input type="checkbox" onclick="successHealing(this);" healingresultid="2" successhealing="true" data-row-index="0" checked="checked">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" style="height: 10px;">
+</div></main>
+
+<script>
+
+    function toggleElementContent(targetElement) {
+        const elementWithIndex = targetElement.hasAttribute('data-row-index') ? targetElement : targetElement.parentNode.parentNode;
+        const rowIndex = elementWithIndex.getAttribute('data-row-index');
+        if (rowIndex) {
+            elementWithIndex.parentNode.classList.toggle('content-hidden');
+        }
+    }
+
+    function rowClickHandler(event) {
+        console.log("rowClickHandler");
+        const targetElement = event.target;
+        console.log("targetElement");
+        toggleElementContent(targetElement);
+    }
+
+    function successHealing(targetElement) {
+        var dto = {
+            "successHealing": targetElement.checked,
+            "healingResultId": targetElement.getAttribute("healingResultId")
+        }
+        targetElement.setAttribute("successHealing", targetElement.checked);
+
+        $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/healenium/healing/success",
+            data: JSON.stringify(dto),
+            dataType: 'json',
+            cache: false,
+            timeout: 600000,
+            success: function (html) {
+                console.log("success")
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                if (200 != jqXHR.status) {
+                    console.log(jqXHR.status + ' ' + jqXHR.responseText)
+                    alert("Couldn't execute accordance");
+                }
+            }
+        });
+    }
+
+    function zoomImage(event) {
+        const targetElement = event;
+        var modal = document.getElementById("myModal");
+        var img = targetElement;
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        // When the user clicks on image open the modal
+        modal.style.display = "block";
+        modalImg.src = img.src;
+        captionText.innerHTML = img.alt;
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    }
+
+    function renderElements() {
+        console.log("renderElements")
+        const elementsTable = document.querySelector('[data-elements-table]');
+        console.log("elementsTable: " + elementsTable)
+        elementsTable.addEventListener('click', rowClickHandler);
+    }
+
+    renderElements();
+
+
+</script>
+
+</body></html>
